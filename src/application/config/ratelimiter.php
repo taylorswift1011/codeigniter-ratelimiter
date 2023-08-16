@@ -17,7 +17,7 @@ $config['ratelimit_table'] = 'rate_limiter';
 *	Ratelimit History Table => Table used for preserving old logs.
 *	Insert Chunk Size => Number of rows to be inserted in history table at once.
 */
-$config['history_backup'] = TRUE;
+$config['history_backup'] = false;
 $config['ratelimit_history_table'] = 'rate_limiter_history';
 $config['insert_chunk_size'] = 50;
 
@@ -41,8 +41,14 @@ $config['block_duration'] = 60;
 *		Key => Identifier of the resource
 *		Track => Whether to track this resource uniquely
 */
-$config['resource'] = array('class_name' => TRUE, 'method_name' => TRUE);
-$config['user_data'] = array('user_id' => TRUE);
+$config['resource'] = array(
+	'class_name' => TRUE,
+	'method_name' => TRUE,
+);
+
+$config['user_data'] = array(
+	'user_id' => TRUE
+);
 
 /*
 *	Whitelist/Blacklist IPs
