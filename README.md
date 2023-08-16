@@ -25,6 +25,9 @@ $params = array(
     'duration' => 30,
     'block_duration' => 30,
     /* Additional Resource/User Data */
+    'class_name' => $this->router->class,
+    'method_name' => $this->router->method,
+    'request_type' => 'GET',
 );
 
 // Verify (return_type = 'object' in config)
